@@ -35,7 +35,8 @@ Before doing any of this, navigate to the desired directory.
          pip install -r requirements.txt
 3. **Export your OpenAI API key to environmental variables.**
 
-         export VARIABLE_NAME="sk-******" # On Windows: setx VARIABLE_NAME "sk-******"
+       export VARIABLE_NAME="sk-******"
+       # On Windows: setx VARIABLE_NAME "sk-******"
 3. **Run the AI Assistant:**:
     
        python src/main.py
