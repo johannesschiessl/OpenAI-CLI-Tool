@@ -1,3 +1,9 @@
+import os
+
+def create_data_directory():
+    if not os.path.exists("data"):
+        os.makedirs("data")
+
 class styles:
     BOLD_START = "\033[1m"
     BOLD_END = "\033[0m"
@@ -7,6 +13,7 @@ class styles:
 
 
 def initiliaze(config):
+    create_data_directory()
     print(f"{styles.BOLD_START}{styles.FONT_SIZE_START}🧠 AI-Assistant (v{config.VERSION}){styles.FONT_SIZE_END}{styles.BOLD_END}")
 
     print("\n🚀 Type '/quit' to exit the program.")
