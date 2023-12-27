@@ -44,5 +44,6 @@ def image_output(url):
 def transcription_output(text):
     print(f"📝 Transcription: {text}")
 
-def audio_output(url):
-    print(f"🎙️ Audio: {url}")
+def audio_output(file_path):
+    print(f"🎙️ Audio: {file_path}")
+    print("⚠️ The audio was generated using an AI model. Not a really human voice.")
