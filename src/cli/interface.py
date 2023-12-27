@@ -43,6 +43,7 @@ def image_output(url):
 
 def transcription_output(text):
     print(f"📝 Transcription: {text}")
+    print(f"📁 File: data\\ai_assistant_transcription.txt")
 
 def audio_output(file_path):
     print(f"🎙️ Audio: {file_path}")
