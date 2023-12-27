@@ -22,3 +22,6 @@ def user_input(user_name):
 
 def assistant_output(response):
     print(f"🧠 Assistant: {response}")
+
+def image_output(url):
+    print(f"🖼️ Image: {url}")
