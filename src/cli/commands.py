@@ -7,9 +7,6 @@ def help():
     print("     /quit - Exit the program")
     print("     /help - Display the list of commands")
 
-def imagine(prompt):
-    print(prompt)
-
 def error():
     print("❌ Invalid command. Please try again.")
 
