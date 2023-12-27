@@ -10,8 +10,17 @@ def main():
     while True:
         prompt = user_input(user_name)
 
-        if cli.commands.check_commands(prompt, user_name) is False:
-            cli.interface.assistant_output(openai_handler.generate_text(user_name, prompt))
+        if prompt[0] == "/":
+            if prompt.startswith("/imagine "):
+                image_output(generate_image(prompt[9:]))
+            elif prompt == "/quit":
+                quit(user_name)
+            elif prompt == "/help":
+                help()
+            else:
+                error()
+        else:
+            assistant_output(generate_text(user_name, prompt))
 
 if __name__ == '__main__':
     main()
