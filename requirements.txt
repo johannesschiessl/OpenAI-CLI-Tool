@@ -1,3 +1,2 @@
 openai==1.6.1
 datetime==5.4
-pathlib
