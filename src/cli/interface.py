@@ -25,3 +25,9 @@ def assistant_output(response):
 
 def image_output(url):
     print(f"🖼️ Image: {url}")
+
+def transcription_output(text):
+    print(f"🎙️ Transcription: {text}")
+
+def audio_output(url):
+    print(f"🎙️ Audio: {url}")
