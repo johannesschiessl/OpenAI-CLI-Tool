@@ -12,7 +12,7 @@ def initiliaze(config):
     print("\n🚀 Type '/quit' to exit the program.")
     print("ℹ️ Type '/help' to see the list of commands.")
 
-    user_name = input("\n📝 Type in your name: ")
+    user_name = input("\n😀 Type in your name: ")
 
     print(f"\n🧠 Assistant: 👋 Hi, {user_name}! How can I help you today?")
     return user_name
@@ -27,7 +27,7 @@ def image_output(url):
     print(f"🖼️ Image: {url}")
 
 def transcription_output(text):
-    print(f"🎙️ Transcription: {text}")
+    print(f"📝 Transcription: {text}")
 
 def audio_output(url):
     print(f"🎙️ Audio: {url}")
