@@ -1,3 +1,5 @@
+import config
+
 def main():
     pass
 
