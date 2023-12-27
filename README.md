@@ -12,6 +12,19 @@ Harness the power of the AI Assistant to generate images based on your specifica
 
         😀 User: /imagine a whale in space
         🖼️ Image: link/to/image
+
+## 3. Audio Transcription:
+Utilize the AI Assistant's advanced capabilities for accurate audio transcription. Simply provide a recorded interview, meeting, or any spoken content, and receive a precise written transcription.
+
+        😀 User: /transcribe path/to/audio/file
+        📝 Transcription: Hello, World!
+
+## 4. Text-to-Speech:
+Experience natural-sounding speech with the AI Assistant's text-to-speech functionality. Supply the desired text, and the AI Assistant will generate an audio file for your convenience.
+
+        😀 User: /text-to-speech This is a test!
+        🎙️ Audio: data\\ai_assistant_tts.mp3
+        
 ## ⚙️ Installation
 Follow these steps to get up and running.
 Before doing any of this, navigate to the desired directory.
@@ -44,6 +57,5 @@ Before doing any of this, navigate to the desired directory.
 ## 🪄 Tips for Effective Interaction
 - Be Specific: Provide clear and specific instructions for better results.
 - Explore Commands: Experiment with different commands to discover the full capabilities of the AI Assistant.
-- Feedback: If the AI Assistant doesn't meet your expectations, provide feedback to help improve its performance.
 ## 🐛 Issues
 If you encounter any issues or have questions, feel free to [open an issue](https://github.com/johannesschiessl/AI-Assistant/issues/new).
