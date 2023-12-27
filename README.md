@@ -28,6 +28,7 @@ Experience natural-sounding speech with the AI Assistant's text-to-speech functi
         
 ## ⚙️ Installation
 Follow these steps to get up and running.
+It is recommended to use a virtual environment to avoid package conflicts.
 Before doing any of this, navigate to the desired directory.
 
 1. **Clone the Repository**:
@@ -37,21 +38,13 @@ Before doing any of this, navigate to the desired directory.
 
        cd AI-Assistant
 3. **Install Requirements**:
-   - (optional) We recommend using a virtual environment, so if you don't have virtualenv installed, run:
-    
-         pip install virtualenv
-   - (optional) Create and activate a virtual environment:
 
-         virtualenv venv
-         source venv/bin/activate   # On Windows: .\venv\Scripts\activate
-   - Install the requirements:
-   
-         pip install -r requirements.txt
-3. **Export your OpenAI API key to environmental variables**
+       pip install -r requirements.txt
+4. **Export your OpenAI API key to environmental variables**
 
        export OPENAI_API_KEY="your api key"
        # On Windows: setx OPENAI_API_KEY "your api key"
-3. **Run the AI Assistant**
+5. **Run the AI Assistant**
     
        python src/main.py
 
