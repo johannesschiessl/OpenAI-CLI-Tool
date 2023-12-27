@@ -1,4 +1,5 @@
 import config
+import openai_handler
 
 def main():
     pass
