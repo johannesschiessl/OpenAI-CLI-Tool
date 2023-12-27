@@ -1,6 +1,8 @@
 import config
-import openai_handler.text_generation as openai_handler
-import cli.interface, cli.commands
+from openai_handler.text_generation import *
+from openai_handler.image_generation import *
+from cli.interface import *
+from cli.commands import *
 
 def main():
     user_name = cli.interface.initiliaze(config)
