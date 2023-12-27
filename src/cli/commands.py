@@ -1,5 +1,4 @@
 def quit(user_name):
-    print(f"🧠 Assistant: 👋 Bye, {user_name}!")
     exit()
 
 def help():
