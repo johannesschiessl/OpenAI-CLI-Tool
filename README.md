@@ -18,6 +18,7 @@ Utilize the AI Assistant's advanced capabilities for accurate audio transcriptio
 
         😀 User: /transcribe path/to/audio/file
         📝 Transcription: Hello, World!
+        📁 File: data\\ai_assistant_transcription.txt
 
 ## 4. Text-to-Speech:
 Experience natural-sounding speech with the AI Assistant's text-to-speech functionality. Supply the desired text, and the AI Assistant will generate an audio file for your convenience.
