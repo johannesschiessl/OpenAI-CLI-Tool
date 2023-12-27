@@ -13,13 +13,3 @@ def imagine(prompt):
 def error():
     print("❌ Invalid command. Please try again.")
 
-def check_commands(prompt, user_name):
-    if prompt[0] == "/":
-        if prompt == "/quit":
-            quit(user_name)
-        elif prompt == "/help":
-            help()
-        else:
-            error()
-    else:
-        return False
