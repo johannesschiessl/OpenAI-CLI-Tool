@@ -47,9 +47,5 @@ Before doing any of this, navigate to the desired directory.
 5. **Run the AI Assistant**
     
        python src/main.py
-
-## 🪄 Tips for Effective Interaction
-- Be Specific: Provide clear and specific instructions for better results.
-- Explore Commands: Experiment with different commands to discover the full capabilities of the AI Assistant.
 ## 🐛 Issues
 If you encounter any issues or have questions, feel free to [open an issue](https://github.com/johannesschiessl/AI-Assistant/issues/new).
