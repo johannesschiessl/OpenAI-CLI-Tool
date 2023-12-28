@@ -1,4 +1,5 @@
 import os
+import json
 
 def create_data_directory():
     if not os.path.exists("data"):
@@ -19,15 +20,15 @@ def initiliaze(config):
     print("\n🚀 Type '/quit' to exit the program.")
     print("ℹ️ Type '/help' to see the list of commands.")
 
-    username_file_path = "data/username.txt"
+    username_file_path = "data/config.json"
     if os.path.exists(username_file_path) and os.path.getsize(username_file_path) > 0:
         with open(username_file_path, "r") as file:
-            user_name = file.read().strip()
+            user_data = json.load(file)
+            user_name = user_data.get("username", "")
     else:
         user_name = input("\n😀 Type in your name: ")
-
-    with open("data/username.txt", "w") as file:
-        file.write(user_name)
+        with open(username_file_path, "w") as file:
+            json.dump({"username": user_name}, file)
 
     print(f"\n🧠 Assistant: 👋 Hi, {user_name}! How can I help you today?")
     return user_name
