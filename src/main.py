@@ -26,7 +26,7 @@ def main():
             else:
                 error()
         else:
-            assistant_output(generate_text(user_name, prompt))
+            assistant_output(generate_text(user_name, config.GPT_MODEL, prompt))
 
 if __name__ == '__main__':
     main()
