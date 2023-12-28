@@ -49,3 +49,12 @@ def transcription_output(text):
 def audio_output(file_path):
     print(f"🎙️ Audio: {file_path}")
     print("⚠️ The audio was generated using an AI model. Not a really human voice.")
+
+def user_file_input():
+    file_path = input(f"📁 File path: ")
+    return file_path
+
+def code_output(comment, code, filename, filetype):
+    print(f"🧠 Assistant: {comment}" f"")
+    print(f"🖥️ Code: {code}")
+    print(f"📁 File: data\\code\\{filename}.{filetype}")
