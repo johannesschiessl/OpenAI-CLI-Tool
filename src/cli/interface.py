@@ -53,8 +53,3 @@ def audio_output(file_path):
 def user_file_input():
     file_path = input(f"📁 File path: ")
     return file_path
-
-def code_output(comment, code, filename, filetype):
-    print(f"🧠 Assistant: {comment}" f"")
-    print(f"🖥️ Code: {code}")
-    print(f"📁 File: data\\code\\{filename}.{filetype}")
