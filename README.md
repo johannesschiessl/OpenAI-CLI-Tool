@@ -46,6 +46,6 @@ Before doing any of this, navigate to the desired directory.
        # On Windows: setx OPENAI_API_KEY "your api key"
 5. **Run the AI Assistant**
     
-       python src/main.py
+       python assistant/main.py
 ## 🐛 Issues
 If you encounter any issues or have questions, feel free to [open an issue](https://github.com/johannesschiessl/AI-Assistant/issues/new).
