@@ -13,14 +13,14 @@ Harness the power of the AI Assistant to generate images based on your specifica
         😀 User: /imagine a whale in space
         🖼️ Image: link/to/image
 
-## 3. Audio Transcription:
+### 3. Audio Transcription:
 Utilize the AI Assistant's advanced capabilities for accurate audio transcription. Simply provide a recorded interview, meeting, or any spoken content, and receive a precise written transcription.
 
         😀 User: /transcribe path/to/audio/file
         📝 Transcription: Hello, World!
         📁 File: data\\ai_assistant_transcription.txt
 
-## 4. Text-to-Speech:
+### 4. Text-to-Speech:
 Experience natural-sounding speech with the AI Assistant's text-to-speech functionality. Supply the desired text, and the AI Assistant will generate an audio file for your convenience.
 
         😀 User: /text-to-speech This is a test!
