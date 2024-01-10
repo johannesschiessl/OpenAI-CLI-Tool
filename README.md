@@ -48,4 +48,4 @@ Before doing any of this, navigate to the desired directory.
     
        python assistant/main.py
 ## 🐛 Issues
-If you encounter any issues or have questions, feel free to [open an issue](https://github.com/johannesschiessl/AI-Assistant/issues/new).
+If you encounter any issues or have feature requests, feel free to [open an issue](https://github.com/johannesschiessl/AI-Assistant/issues/new).
