@@ -21,6 +21,8 @@ def main():
                 transcription_output(transcribe_audio(prompt[12:]))
             elif prompt.startswith("/text-to-speech "):
                 audio_output(generate_audio(prompt[16:]))
+            elif prompt == "/restart":
+                conversation_history = []
             elif prompt == "/quit":
                 quit(user_name)
             elif prompt == "/help":
