@@ -29,7 +29,7 @@ Experience natural-sounding speech with the AI Assistant's text-to-speech functi
 ## ⚙️ Installation
 Follow these steps to get up and running.
 It is recommended to use a virtual environment to avoid package conflicts.
-Before doing any of this, navigate to the desired directory.
+Before doing any of this, navigate to the desired directory. You will also need to have Python installed on your machine.
 
 1. **Clone the Repository**:
 
@@ -42,7 +42,7 @@ Before doing any of this, navigate to the desired directory.
        pip install -r requirements.txt
 4. **Export your OpenAI API key to environmental variables**
 
-       export OPENAI_API_KEY="your api key"
+       # On MacOS/Linux: export OPENAI_API_KEY="your api key"
        # On Windows: setx OPENAI_API_KEY "your api key"
 5. **Run the AI Assistant**
     
