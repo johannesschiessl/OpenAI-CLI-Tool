@@ -15,7 +15,7 @@ def generate_system_prompt():
 
     return f"You are a helpful assistant, based on the GPT-3.5 Turbo architecture, a large language model trained by OpenAI. Answer briefly and accurately. Current User's name: {user_name} - Knowledge cutoff: 2022-01 - Current date: {get_current_date()}"
 
-def manage_context(new_prompt, conversation_history):
+def manage_context(conversation_history):
     messages = []
 
     if not messages:
@@ -34,7 +34,7 @@ def generate_text(prompt, conversation_history):
         model_data = json.load(file)
         model = model_data.get("model", "")
     conversation_history.append({"role": "user", "content": prompt})
-    messages = manage_context(prompt, conversation_history)
+    messages = manage_context(conversation_history)
 
     response = client.chat.completions.create(
         model=model,
