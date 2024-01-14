@@ -20,7 +20,7 @@ header h1 {
     cursor: pointer;
 }
 
-.transcribe-container {
+.tts-container {
     width: 80%;
     height: 300px;
     background-color: #fff;
