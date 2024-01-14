@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="{{ url_for('chat') }}">
+            <div class="tile" style="color: #74C0FC"><i class="fa-solid fa-comments" style="color: #74C0FC;"></i>Chat</div>
+        </a>
+
+        <a href="{{ url_for('image') }}">
+            <div class="tile" style="color: #63E6BE"><i class="fa-solid fa-image" style="color: #63E6BE;"></i>Image</div>
+        </a>
+
+        <a href="{{ url_for('transcribe') }}">
+            <div class="tile" style="color: #ffc800"><i class="fa-solid fa-file-audio" style="color: #ffc800;"></i>Transcribe</div>
+        </a>
+
+        <a href="{{ url_for('text_to_speech') }}"><div class="tile" style="color: #B197FC"><i class="fa-solid fa-headphones-simple" style="color: #B197FC;"></i>Text-to-Speech</div>
+        </a>
+    </div>
+
+    <script src="https://kit.fontawesome.com/d94d01613f.js" crossorigin="anonymous"></script>
+</body>
+</html>
