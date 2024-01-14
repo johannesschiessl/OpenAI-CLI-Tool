@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcribe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transcribe.css') }}">
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div id="back-button" onclick="goBack()"><i class="fa-solid fa-left-long"></i> Back</div>
+        <h1><i class="fa-solid fa-file-audio" style="color: #ffc800;"></i> Transcribe File</h1>
+    </header>
+    <div class="transcribe-container">
+    </div>
+    <div class="input-container">
+        <button><i class="fa-solid fa-file"></i> Choose file</button>
+    </div>
+
+    <script src="https://kit.fontawesome.com/d94d01613f.js" crossorigin="anonymous"></script>
+</body>
+</html>
