@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.tile {
+    height: 100px;
+    width: 200px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tile:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.tile i {
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+
+a {
+        text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Keeps the font color of the anchor the same as the text */
+}
