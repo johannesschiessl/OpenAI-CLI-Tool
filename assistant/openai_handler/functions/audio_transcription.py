@@ -1,11 +1,4 @@
 from openai import OpenAI
-
-import sys
-sys.path.append('../utils')
-
-import utils
-
-
 from utils import *
 
 def transcribe_audio(file_path):
