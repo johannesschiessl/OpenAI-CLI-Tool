@@ -11,6 +11,3 @@ def transcribe_audio(file_path):
 
     write_output_to_file(response, "data\\ai_assistant_transcription.txt")
     return response
-
-if __name__ == "__main__":
-    transcribe_audio("data\\ai_assistant_tts.mp3")
