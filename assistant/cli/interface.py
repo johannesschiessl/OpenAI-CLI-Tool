@@ -28,7 +28,7 @@ def initiliaze(config):
     else:
         user_name = input("\n😀 Type in your name: ")
         with open(username_file_path, "w") as file:
-            json.dump({"version": "0.1.0", "model": "gpt-3.5-turbo", "username": user_name}, file)
+            json.dump({"version": "0.1.0", "model": "gpt-3.5-turbo-1106", "username": user_name}, file)
 
     print(f"\n🧠 Assistant: 👋 Hi, {user_name}! How can I help you today?")
     return user_name
