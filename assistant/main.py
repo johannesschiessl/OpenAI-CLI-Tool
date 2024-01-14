@@ -1,8 +1,8 @@
 import config
 from openai_handler.text_generation import *
-from openai_handler.image_generation import *
-from openai_handler.audio_transcription import *
-from openai_handler.audio_generation import *
+from openai_handler.functions.image_generation import *
+from openai_handler.functions.audio_transcription import *
+from openai_handler.functions.audio_generation import *
 from cli.interface import *
 from cli.commands import *
 
