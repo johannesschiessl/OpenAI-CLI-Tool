@@ -1,2 +1,2 @@
 VERSION = "0.1.1"
-GPT_MODEL = "gpt-3.5-turbo"
+DEFAULT_GPT_MODEL = "gpt-3.5-turbo"
