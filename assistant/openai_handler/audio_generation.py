@@ -8,11 +8,15 @@ def get_current_date_time():
 
 def generate_audio(prompt):
     client = OpenAI()
-    response = client.audio.speech.create(
-        model="tts-1",
-        voice="alloy",
-        input=prompt,
-    )
+    try:
+        response = client.audio.transcriptions.create(
+            model="whisper-1",
+            file=open("data\\ai_assistant_transcription.txt", "rb"),
+            response_format="text",
+        )
+    except:
+        print("❌ Error: An error occurred while generating the audio. Please try again.")
+        return
 
     response.stream_to_file("data\\ai_assistant_tts.mp3")
     return "data\\ai_assistant_tts.mp3"
