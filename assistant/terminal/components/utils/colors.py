@@ -15,3 +15,6 @@ def purple(text):
 
 def cyan(text):
     return "\033[96m{}\033[0m".format(text)
+
+def light_gray(text):
+    return "\033[97m{}\033[0m".format(text)
