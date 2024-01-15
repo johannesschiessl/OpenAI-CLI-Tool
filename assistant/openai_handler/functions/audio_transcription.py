@@ -12,5 +12,5 @@ def transcribe_audio(file_path):
         response_format="text",
     )
 
-    utils.write_output_to_file(response, "data\\ai_assistant_transcription.txt")
+    write_output_to_file(response, "data\\ai_assistant_transcription.txt")
     return response
