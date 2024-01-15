@@ -36,10 +36,14 @@ def generate_text(prompt, conversation_history):
     conversation_history.append({"role": "user", "content": prompt})
     messages = manage_context(conversation_history)
 
-    response = client.chat.completions.create(
-        model=model,
-        messages=messages
-    )
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages
+        )
+    except:
+        print("❌ Error: An error occurred while generating the text. Please try again.")
+        return
 
     chatbot_response = response.choices[0].message.content
 
