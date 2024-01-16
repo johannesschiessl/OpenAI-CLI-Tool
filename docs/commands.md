@@ -4,7 +4,7 @@
 Generate an image using this command. Unleash your creativity and let the program create visual wonders for you.
 
 Example:
-`/imagine <image-gen prompt>´
+`/imagine a whale in space´
 
 ## /transcribe
 Generate a text file transcription from an audio file using this command. 
@@ -18,7 +18,7 @@ Generate an audio file from a text input using this command.
 Easily listen to your notes without having to read yourself.
 
 Example:
-`/text-to-speech <text>´
+`/text-to-speech Hello, World!´
 
 ## /restart
 Create a new conversation with this prompt.
