@@ -1,4 +1,4 @@
-from utils.colors import red, cyan
+from components.utils.colors import red, cyan
 
 def error_unknown():
     print(red("An unknown error occurred. Please try again."))

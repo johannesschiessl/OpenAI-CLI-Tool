@@ -1,6 +1,6 @@
 def help_section():
 
-    from utils.colors import cyan
+    from components.utils.colors import cyan
 
     print("\n Available commands:")
     print(f"     {cyan('/imagine')} - Generate an image")
