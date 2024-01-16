@@ -2,8 +2,8 @@ import json
 
 def initialize():
 
-    from components.utils.colors import green, red, cyan, purple
-    from components.utils.find_path_to_data_file import find_path_to_data_file
+    from terminal.utils.colors import green, red, cyan, purple
+    from terminal.utils.find_path_to_data_file import find_path_to_data_file
 
     USERNAME_FILE_PATH = find_path_to_data_file("config.json")
 
