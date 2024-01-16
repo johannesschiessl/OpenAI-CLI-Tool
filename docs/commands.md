@@ -26,7 +26,7 @@ Create a new conversation with this prompt.
 Example:
 `/restart´
 
-## /restart
+## /quit
 Exit the program with this prompt.
 
 Example:
