@@ -16,12 +16,7 @@ def run(prompt, conversation_history):
     except:
         error_unknown()
         return None, conversation_history
-
-    with open("data/config.json", "r") as file:
-        model_data = json.load(file)
-        model = model_data.get("model", "")
-
-
+        
     try:
         response = openai.ChatCompletion.create(
             model=model,
