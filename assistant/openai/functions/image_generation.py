@@ -1,5 +1,6 @@
 from openai import OpenAI
 
+
 def generate_image(prompt):
     client = OpenAI()
     response = client.images.generate(
