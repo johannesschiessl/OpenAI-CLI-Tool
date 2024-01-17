@@ -3,7 +3,7 @@ from rich.syntax import Syntax
 from rich.panel import Panel
 from rich.style import Style
 
-from terminal.utils.colors import light_gray
+from terminal.utils.style_handling import light_gray
 
 def print_assistant_output(output):
     print(light_gray(f"\n{output}"))
