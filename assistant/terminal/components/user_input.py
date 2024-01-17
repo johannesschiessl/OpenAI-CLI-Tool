@@ -1,2 +1,2 @@
-def user_input():
-    return input("> ")
+def get_user_input():
+    return input("\n> ")
