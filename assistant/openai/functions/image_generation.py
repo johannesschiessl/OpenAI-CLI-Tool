@@ -1,11 +1,12 @@
-import openai
+from openai import OpenAI
 
 from terminal.components.system_messages import error_openai
 
 
 def generate_image(prompt):
     try:
-        response = openai.Image.create(
+        client = OpenAI()
+        response = client.Image.create(
             prompt=prompt,
             n=1,
             size="1024x1024",

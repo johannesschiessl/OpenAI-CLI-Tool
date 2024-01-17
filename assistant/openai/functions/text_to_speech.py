@@ -1,11 +1,12 @@
-import openai
+from openai import OpenAI
 from utils.date_time_handling import *
 from terminal.components.system_messages import *
 
 
 def text_to_speech(prompt):
     try:
-        response = openai.Audio.create(
+        client = OpenAI()
+        response = client.Audio.create(
             model="whisper-1",
             file=open(prompt, "rb"),
         )

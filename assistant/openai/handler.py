@@ -1,4 +1,5 @@
-import openai
+from openai import OpenAI
+
 import json
 
 from openai.utils.context_handling import manage_context
@@ -7,6 +8,8 @@ from terminal.components.system_messages import *
 
 
 def run(prompt, conversation_history):
+
+
     try:
         with open("data/config.json", "r") as file:
             model_data = json.load(file)
@@ -18,7 +21,8 @@ def run(prompt, conversation_history):
         return None, conversation_history
         
     try:
-        response = openai.ChatCompletion.create(
+        client = OpenAI()
+        response = client.ChatCompletion.create(
             model=model,
             messages=messages
         )
