@@ -1,4 +1,4 @@
-from openai_handler.utils.system_prompt_handling import generate_system_prompt
+from openai.utils.system_prompt_handling import generate_system_prompt
 
 def manage_context(conversation_history):
     messages = []

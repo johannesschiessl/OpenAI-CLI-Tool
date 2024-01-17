@@ -1,6 +1,6 @@
 import openai
 from utils.date_time_handling import *
-from cli.components.system_messages import *
+from terminal.components.system_messages import *
 
 
 def text_to_speech(prompt):
