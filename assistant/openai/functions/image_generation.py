@@ -1,14 +1,18 @@
-from openai import OpenAI
+import openai
+
+from terminal.components.system_messages import error_openai
 
 
 def generate_image(prompt):
-    client = OpenAI()
-    response = client.images.generate(
-        model="dall-e-3",
-        prompt=prompt,
-        size="1024x1024",
-        quality="standard",
-        n=1,
-    )
+    try:
+        response = openai.Image.create(
+            prompt=prompt,
+            n=1,
+            size="1024x1024",
+            response_format="url",
+        )
+    except:
+        error_openai()
+        return None
 
     return response.data[0].url

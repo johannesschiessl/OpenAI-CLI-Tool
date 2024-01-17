@@ -1,24 +1,25 @@
-from openai import OpenAI
+import openai
+from utils.file_handling import write_output_to_file
+from terminal.components.system_messages import *
 
 
 def transcribe_audio(file_path):
-    client = OpenAI()
 
     try:
         file = open(file_path, "rb")
     except:
-        print("❌ Error: File not found. Please provide a valid file path.")
-        return
+        error_file_not_found(file_path)
+        return None
 
     try:
-        response = client.audio.transcriptions.create(
+        response = openai.audio.transcriptions.create(
             model="whisper-1",
             file=file,
             response_format="text",
         )
     except:
-        print("❌ Error: An error occurred while transcribing the audio. Please try again.")
-        return
+        error_openai()
+        return None
 
 
     write_output_to_file(response, "data\\ai_assistant_transcription.txt")
