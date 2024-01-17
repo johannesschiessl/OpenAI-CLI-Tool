@@ -26,11 +26,11 @@ Create a new conversation with this prompt.
 Example:
 `/restart´
 
-## /quit
+## /exit
 Exit the program with this prompt.
 
 Example:
-`/quit´
+`/exit´
 
 ## /help
 Display a full list of commands with this prompt.
