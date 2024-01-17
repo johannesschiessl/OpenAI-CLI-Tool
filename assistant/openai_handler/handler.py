@@ -1,9 +1,9 @@
 import openai
 import json
 
-from openai.utils.context_handling import manage_context
+from openai_handler.utils.context_handling import manage_context
 
-from terminal.components.system_messages import *
+from cli.components.system_messages import *
 
 
 def run(prompt, conversation_history):

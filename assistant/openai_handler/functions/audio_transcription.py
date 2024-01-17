@@ -1,6 +1,6 @@
 import openai
 from utils.file_handling import write_output_to_file
-from terminal.components.system_messages import *
+from cli.components.system_messages import *
 
 
 def transcribe_audio(file_path):

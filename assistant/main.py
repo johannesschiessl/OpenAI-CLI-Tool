@@ -1,14 +1,14 @@
 import config
 
-from openai.handler import run
-from openai.functions.image_generation import generate_image
-from openai.functions.text_to_speech import text_to_speech
-from openai.functions.audio_transcription import transcribe_audio
+from openai_handler.handler import run
+from openai_handler.functions.image_generation import generate_image
+from openai_handler.functions.text_to_speech import text_to_speech
+from openai_handler.functions.audio_transcription import transcribe_audio
 
-from terminal.components.user_input import get_user_input
-from terminal.components.assistant_output import print_assistant_output
+from cli.components.user_input import get_user_input
+from cli.components.assistant_output import print_assistant_output
 
-from terminal.components.system_messages import *
+from cli.components.system_messages import *
 
 
 def main():

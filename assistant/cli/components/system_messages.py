@@ -1,6 +1,6 @@
 import json
 
-from terminal.utils.style_handling import green, red, cyan, purple
+from cli.utils.style_handling import green, red, cyan, purple
 from utils.file_handling import find_path_to_data_file
 
 def message_initialize():

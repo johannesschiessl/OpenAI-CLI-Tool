@@ -1,6 +1,6 @@
 import openai
 
-from terminal.components.system_messages import error_openai
+from cli.components.system_messages import error_openai
 
 
 def generate_image(prompt):
