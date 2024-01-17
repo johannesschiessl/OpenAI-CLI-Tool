@@ -1,37 +1,45 @@
 import config
-from openai_handler.text_generation import *
-from openai_handler.image_generation import *
-from openai_handler.audio_transcription import *
-from openai_handler.audio_generation import *
-from cli.interface import *
-from cli.commands import *
+
+from openai.handler import run
+from openai.functions.image_generation import generate_image
+from openai.functions.text_to_speech import text_to_speech
+from openai.functions.audio_transcription import transcribe_audio
+
+from terminal.components.user_input import get_user_input
+from terminal.components.assistant_output import print_assistant_output
+
+from terminal.components.system_messages import *
+
 
 def main():
-    user_name = initiliaze(config)
 
+    message_initialize()
     conversation_history = []
 
     while True:
-        prompt = user_input(user_name)
+        user_input = get_user_input()
 
-        if prompt[0] == "/":
-            if prompt.startswith("/imagine "):
-                image_output(generate_image(prompt[9:]))
-            elif prompt.startswith("/transcribe "):
-                transcription_output(transcribe_audio(prompt[12:]))
-            elif prompt.startswith("/text-to-speech "):
-                audio_output(generate_audio(prompt[16:]))
-            elif prompt == "/restart":
+        if user_input[0] == "/":
+            if user_input.startswith("/imagine "):
+                print_assistant_output(generate_image(user_input[9:]))
+            elif user_input.startswith("/transcribe "):
+                print_assistant_output(transcribe_audio(user_input[12:]))
+            elif user_input.startswith("/tts "):
+                print_assistant_output(text_to_speech(user_input[16:]))
+            elif user_input == "/reset":
                 conversation_history = []
-            elif prompt == "/quit":
-                quit(user_name)
-            elif prompt == "/help":
-                help()
+                message_reset_conversation()
+            elif user_input == "/exit":
+                quit()
+            elif user_input == "/help":
+                message_help()
             else:
-                error()
+                error_invalid_command()
         else:
-            response, conversation_history = generate_text(prompt, conversation_history)
-            assistant_output(response)
+            assistant_output, conversation_history = run(user_input, conversation_history)
+            print_assistant_output(assistant_output)
+
+
 
 if __name__ == '__main__':
     main()
