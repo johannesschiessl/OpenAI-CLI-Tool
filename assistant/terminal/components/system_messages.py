@@ -1,7 +1,7 @@
 import json
 
-from terminal.utils.colors import green, red, cyan, purple
-from terminal.utils.find_path_to_data_file import find_path_to_data_file
+from terminal.utils.style_handling import green, red, cyan, purple
+from utils.file_handling import find_path_to_data_file
 
 def message_initialize():
 
@@ -22,12 +22,10 @@ def message_initialize():
 
 
 def message_reset_conversation():
-    print("Your conversation history has been reset.")
+    print("\nYour conversation history has been reset.")
 
 
 def message_help():
-
-    from terminal.utils.colors import cyan
 
     print("\nAvailable commands:")
     print(f"     {cyan('/imagine')} - Generate an image")
@@ -51,3 +49,5 @@ def error_invalid_command():
 
 def error_openai():
     print(red("\nAn error occurred with OpenAI. Please try again."))
+
+error_file_not_found = lambda file_path: print(red(f"\nFile not found: {file_path}"))
