@@ -1,3 +1,8 @@
+
+# Currently not working. Due to a problem that has been merged into the main branch :( Nothing works right now... Our fault...
+
+
+
 # AI-Assistant
 Welcome to AI Assistant, an intelligent assistant designed to assist you with a variety of tasks using a command-line interface (CLI). Whether you have questions that need answering or require image generation, the AI Assistant is here to help.
 
