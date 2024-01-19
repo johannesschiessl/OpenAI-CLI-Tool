@@ -1,10 +1,10 @@
 import json
-
+from utils.file_handling import find_path_to_data_file
 from utils.date_time_handling import get_current_date_time
 
 def generate_system_prompt():
 
-    file_path = "data/config.json"
+    file_path = find_path_to_data_file("config.json")
 
     with open(file_path, "r") as file:
         file_data = json.load(file)
