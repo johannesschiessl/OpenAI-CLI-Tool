@@ -10,7 +10,7 @@ def message_initialize():
     with open(USERNAME_FILE_PATH, "r") as file:
         config_data = json.load(file)
         version = config_data.get("version", "")
-        gpt_model = config_data.get("gpt_model", "")
+        gpt_model = config_data.get("model", "")
 
     print(green(f"AI-Assistant ({version})"))
     print(red(f"\nModel: {purple(gpt_model)}\n"))
