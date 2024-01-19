@@ -6,7 +6,10 @@ from rich.style import Style
 from terminal.utils.style_handling import light_gray
 
 def print_assistant_output(output):
-    print(light_gray(f"\n{output}"))
+    print(light_gray(f"{output}"), end='')
+
+def print_newline():
+    print()
 
 
 def print_code_block(code, language='python'):
