@@ -36,8 +36,7 @@ def main():
             else:
                 error_invalid_command()
         else:
-            assistant_output, conversation_history = run(user_input, conversation_history)
-            print_assistant_output(assistant_output)
+            conversation_history = run(user_input, conversation_history)
 
 
 
