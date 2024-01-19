@@ -1,5 +1,4 @@
 import openai_local
-print(openai_local)
 
 from openai import OpenAI
 import json
