@@ -7,38 +7,45 @@ import json
 from openai_local.utils.context_handling import manage_context
 from utils.file_handling import find_path_to_data_file
 from terminal.components.system_messages import *
+from terminal.components.assistant_output import *
 
 
 def run(prompt, conversation_history):
     try:
         with open(find_path_to_data_file("config.json"), "r") as file:
-            print(find_path_to_data_file("config.json"))
             model_data = json.load(file)
-            print(model_data)
             model = model_data.get("model", "")
-            print(model)
         conversation_history.append({"role": "user", "content": prompt})
-        print(conversation_history)
         messages = manage_context(conversation_history)
-        print(messages)
     except Exception as e:
         error_unknown()
-        return e, conversation_history
+        return conversation_history
         
-    try: 
+    try:
         client = OpenAI()
-        response = client.chat.completions.create(
+
+        response = ""
+
+        stream = client.chat.completions.create(
+            model=model,
             messages=messages,
-            model=model
+            stream=True,
         )
+        print_newline()
+
+        for chunk in stream:
+            if chunk.choices[0].delta.content is not None:
+                print_assistant_output(chunk.choices[0].delta.content)
+                response += chunk.choices[0].delta.content
+
+        print_newline()
+
     except Exception as e:
         error_openai()
-        return e, conversation_history
+        print(e)
+        return conversation_history
 
 
+    conversation_history.append({"role": "assistant", "content": response})
 
-    chatbot_response = response.choices[0].message.content
-
-    conversation_history.append({"role": "assistant", "content": chatbot_response})
-
-    return chatbot_response, conversation_history
+    return conversation_history
