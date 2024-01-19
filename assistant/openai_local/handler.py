@@ -1,5 +1,4 @@
 import openai_local
-print(openai_local)
 
 from openai import OpenAI
 import json
@@ -12,15 +11,10 @@ from terminal.components.system_messages import *
 def run(prompt, conversation_history):
     try:
         with open(find_path_to_data_file("config.json"), "r") as file:
-            print(find_path_to_data_file("config.json"))
             model_data = json.load(file)
-            print(model_data)
             model = model_data.get("model", "")
-            print(model)
         conversation_history.append({"role": "user", "content": prompt})
-        print(conversation_history)
         messages = manage_context(conversation_history)
-        print(messages)
     except Exception as e:
         error_unknown()
         return e, conversation_history
