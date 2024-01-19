@@ -1,9 +1,9 @@
 import config
 
-from openai.handler import run
-from openai.functions.image_generation import generate_image
-from openai.functions.text_to_speech import text_to_speech
-from openai.functions.audio_transcription import transcribe_audio
+from openai_local.handler import run
+from openai_local.functions.image_generation import generate_image
+from openai_local.functions.text_to_speech import text_to_speech
+from openai_local.functions.audio_transcription import transcribe_audio
 
 from terminal.components.user_input import get_user_input
 from terminal.components.assistant_output import print_assistant_output
