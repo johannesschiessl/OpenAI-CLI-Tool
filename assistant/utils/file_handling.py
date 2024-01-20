@@ -1,9 +1,31 @@
 import os
+import json
+import config
+
+
+def create_config_file_if_not_exist():
+
+    if not os.path.exists(find_path_to_data_directory()):
+        os.makedirs(find_path_to_data_directory())
+
+
+    config_data = {
+        "version": config.VERSION,
+        "model": config.DEFAULT_GPT_MODEL
+    }
+
+    with open(find_path_to_data_file("config.json"), 'w') as file:
+        json.dump(config_data, file)
+
+def find_path_to_data_directory():
+    current_script_path = os.path.abspath(__file__)
+    ai_assistant_dir = os.path.abspath(os.path.join(current_script_path, '..', '..', '..'))
+    file_path = os.path.join(ai_assistant_dir, 'data')
+    return file_path
 
 def find_path_to_data_file(file):
-
     current_script_path = os.path.abspath(__file__)
-    ai_assistant_dir = os.path.abspath(os.path.join(current_script_path, '..', '..', '..', '..'))
+    ai_assistant_dir = os.path.abspath(os.path.join(current_script_path, '..', '..', '..'))
     file_path = os.path.join(ai_assistant_dir, 'data', file)
     return file_path
 

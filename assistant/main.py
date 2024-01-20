@@ -10,8 +10,12 @@ from terminal.components.assistant_output import print_assistant_output
 
 from terminal.components.system_messages import *
 
+from utils.file_handling import create_config_file_if_not_exist
+
 
 def main():
+
+    create_config_file_if_not_exist()
 
     message_initialize()
     conversation_history = []
@@ -29,6 +33,8 @@ def main():
             elif user_input == "/reset":
                 conversation_history = []
                 message_reset_conversation()
+            elif user_input == "/configure":
+                message_configure()
             elif user_input == "/exit":
                 quit()
             elif user_input == "/help":
