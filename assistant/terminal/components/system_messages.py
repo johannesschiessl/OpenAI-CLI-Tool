@@ -18,6 +18,7 @@ def message_initialize():
     print(f"Type {cyan('/help')} for a list of commands.")
     print(f"Type {cyan('/exit')} to exit the program.\n")
 
+    print(f"Type {cyan('/configure')} to change the model.")
     print(f"Type {cyan('/reset')} to reset the conversation history.")
 
 def message_configure():
@@ -65,6 +66,7 @@ def message_help():
     print(f"     {cyan('/imagine')} - Generate an image")
     print(f"     {cyan('/transcribe')} - Transcribe an audio file")
     print(f"     {cyan('/tts')} - Convert text to speech\n")
+    print(f"     {cyan('/configure')} - Configure which model to use")
     print(f"     {cyan('/reset')} - Reset the conversation history\n")
     print(f"     {cyan('/help')} - Display the list of commands")
     print(f"     {cyan('/exit')} - Exit the program")
