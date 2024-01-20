@@ -1,11 +1,12 @@
 import openai
 
 from terminal.components.system_messages import error_openai
+from terminal.components.assistant_output import *
 
 
 def generate_image(prompt):
     try:
-        response = openai.Image.create(
+        response = openai.images.generate(
             prompt=prompt,
             n=1,
             size="1024x1024",
@@ -13,6 +14,6 @@ def generate_image(prompt):
         )
     except:
         error_openai()
-        return None
+        return
 
-    return response.data[0].url
+    print_image_url(response.data[0].url)
