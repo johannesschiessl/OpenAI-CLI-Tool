@@ -15,7 +15,6 @@ def text_to_speech(prompt):
         )
 
     except Exception as e:
-        print(e)
         error_openai()
         return None
 
