@@ -1,36 +1,6 @@
-
-# Status [January 19th 2024]: Working
-
-
-
 # AI-Assistant
-Welcome to AI Assistant, an intelligent assistant designed to assist you with a variety of tasks using a command-line interface (CLI). Whether you have questions that need answering or require image generation, the AI Assistant is here to help.
-
-## Features
-### 1. Questions and Answers:
-The AI Assistant is equipped to provide insightful answers to a wide range of questions. Engage in meaningful conversations and gather information effortlessly.
-
-        User: What's the diameter of the earth?
-        Assistant: The diameter of the Earth is approximately 12,742 kilometers (7,918 miles).
-### 2. Image Generation:
-Harness the power of the AI Assistant to generate images based on your specifications. Whether you need visualizations, designs, or art, the AI Assistant has got you covered.
-
-        User: /imagine a whale in space
-        Image: link/to/image
-
-### 3. Audio Transcription:
-Utilize the AI Assistant's advanced capabilities for accurate audio transcription. Simply provide a recorded interview, meeting, or any spoken content, and receive a precise written transcription.
-
-        User: /transcribe path/to/audio/file
-        Transcription: Hello, World!
-        File: data\\ai_assistant_transcription.txt
-
-### 4. Text-to-Speech:
-Experience natural-sounding speech with the AI Assistant's text-to-speech functionality. Supply the desired text, and the AI Assistant will generate an audio file for your convenience.
-
-        User: /text-to-speech This is a test!
-        Audio: data\\ai_assistant_tts.mp3
-        
+A CLI tool designed to help you with a variety of tasks. Makes it easy to interact with the OpenAI API. Whether you have a question, need an image, want to convert text to speech, or want to transcribe something, AI-Assistant is here to help.
+       
 ## Installation
 Follow these steps to get up and running.
 It is recommended to use a virtual environment to avoid package conflicts.
