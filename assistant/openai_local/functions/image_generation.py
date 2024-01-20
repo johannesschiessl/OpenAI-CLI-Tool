@@ -1,7 +1,7 @@
 import openai
 
 from terminal.components.system_messages import error_openai
-from terminal.components.assistant_output import *
+from terminal.components.assistant_output import print_image
 
 
 def generate_image(prompt):
@@ -16,4 +16,4 @@ def generate_image(prompt):
         error_openai()
         return
 
-    print_image_url(response.data[0].url)
+    print_image(response.data[0].url)
