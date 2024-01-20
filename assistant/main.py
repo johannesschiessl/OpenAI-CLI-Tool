@@ -22,27 +22,27 @@ def main():
 
     while True:
         user_input = get_user_input()
-
-        if user_input[0] == "/":
-            if user_input.startswith("/imagine "):
-                generate_image(user_input[9:])
-            elif user_input.startswith("/transcribe "):
-                transcribe_audio(user_input[12:])
-            elif user_input.startswith("/tts "):
-                text_to_speech(user_input[4:])
-            elif user_input == "/reset":
-                conversation_history = []
-                message_reset_conversation()
-            elif user_input == "/configure":
-                message_configure()
-            elif user_input == "/exit":
-                quit()
-            elif user_input == "/help":
-                message_help()
+        if user_input:
+            if user_input[0] == "/":
+                if user_input.startswith("/imagine "):
+                    generate_image(user_input[9:])
+                elif user_input.startswith("/transcribe "):
+                    transcribe_audio(user_input[12:])
+                elif user_input.startswith("/tts "):
+                    text_to_speech(user_input[4:])
+                elif user_input == "/reset":
+                    conversation_history = []
+                    message_reset_conversation()
+                elif user_input == "/configure":
+                    message_configure()
+                elif user_input == "/exit":
+                    quit()
+                elif user_input == "/help":
+                    message_help()
+                else:
+                    error_invalid_command()
             else:
-                error_invalid_command()
-        else:
-            conversation_history = run(user_input, conversation_history)
+                conversation_history = run(user_input, conversation_history)
 
 
 
