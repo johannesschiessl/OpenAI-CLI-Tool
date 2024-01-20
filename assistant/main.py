@@ -33,6 +33,8 @@ def main():
             elif user_input == "/reset":
                 conversation_history = []
                 message_reset_conversation()
+            elif user_input == "/configure":
+                message_configure()
             elif user_input == "/exit":
                 quit()
             elif user_input == "/help":
