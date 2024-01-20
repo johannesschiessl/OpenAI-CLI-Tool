@@ -30,6 +30,7 @@ def find_path_to_data_file(file):
     return file_path
 
 
-def write_output_to_file(output, file_path):
+def write_output_to_file(output):
+    file_path = find_path_to_data_file("transcription.txt")
     with open(file_path, 'w') as file:
         file.write(output)
