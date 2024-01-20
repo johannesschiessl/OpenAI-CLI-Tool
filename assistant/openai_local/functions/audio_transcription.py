@@ -1,6 +1,7 @@
 import openai
 from utils.file_handling import write_output_to_file
 from terminal.components.system_messages import *
+from terminal.components.assistant_output import print_transcription
 
 
 def transcribe_audio(file_path):
@@ -9,7 +10,7 @@ def transcribe_audio(file_path):
         file = open(file_path, "rb")
     except:
         error_file_not_found(file_path)
-        return None
+        return
 
     try:
         response = openai.audio.transcriptions.create(
@@ -17,10 +18,12 @@ def transcribe_audio(file_path):
             file=file,
             response_format="text",
         )
-    except:
+    except Exception as e:
         error_openai()
-        return None
+        return
+
+    response = response.strip()
 
 
-    write_output_to_file(response, "data\\ai_assistant_transcription.txt")
-    return response
+    write_output_to_file(response)
+    print_transcription(response)
