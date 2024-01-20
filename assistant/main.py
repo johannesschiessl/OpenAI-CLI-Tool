@@ -25,11 +25,11 @@ def main():
 
         if user_input[0] == "/":
             if user_input.startswith("/imagine "):
-                print_assistant_output(generate_image(user_input[9:]))
+                generate_image(user_input[9:])
             elif user_input.startswith("/transcribe "):
-                print_assistant_output(transcribe_audio(user_input[12:]))
+                transcribe_audio(user_input[12:])
             elif user_input.startswith("/tts "):
-                print_assistant_output(text_to_speech(user_input[16:]))
+                text_to_speech(user_input[4:])
             elif user_input == "/reset":
                 conversation_history = []
                 message_reset_conversation()
