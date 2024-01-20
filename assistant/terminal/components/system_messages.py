@@ -20,6 +20,40 @@ def message_initialize():
 
     print(f"Type {cyan('/reset')} to reset the conversation history.")
 
+def message_configure():
+    print(f"\n{red('Available Models:')}")
+    print(f"#1     {purple('gpt-3.5-turbo')}")
+    print(f"#2     {purple('gpt-4-1106-preview')}")
+    print(f"#3     {purple('gpt-4')}")
+    print(f"#4     {purple('gpt-4-32k')}")
+
+    with open(find_path_to_data_file("config.json"), "r") as file:
+        model_data = json.load(file)
+        current_model = model_data.get("model", "")
+
+    if current_model:
+        print(f"\nCurrent model: {purple(current_model)}")
+
+    print("\nType the number of the model you want to use.")
+    model_user_input = input("#")
+
+    if model_user_input == "1":
+        new_model = "gpt-3.5-turbo"
+    elif model_user_input == "2":
+        new_model = "gpt-4-1106-preview"
+    elif model_user_input == "3":
+        new_model = "gpt-4"
+    elif model_user_input == "4":
+        new_model = "gpt-4-32k"
+    else:
+        print(red("\nInvalid model. Set to previous model."))
+        new_model = current_model
+
+
+    with open(find_path_to_data_file("config.json"), 'w') as file:
+        json.dump({"model": new_model}, file)
+
+    print("\nModel changed to:", purple(new_model))
 
 def message_reset_conversation():
     print("\nYour conversation history has been reset.")
