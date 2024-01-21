@@ -36,7 +36,7 @@ def main():
                 elif user_input == "/configure":
                     message_configure()
                 elif user_input == "/exit":
-                    quit()
+                    exit()
                 elif user_input == "/help":
                     message_help()
                 else:
