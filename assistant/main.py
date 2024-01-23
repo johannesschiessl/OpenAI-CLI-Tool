@@ -18,7 +18,7 @@ def main():
     create_config_file_if_not_exist()
 
     message_initialize()
-    conversation_history = []
+    conversation_history: list = []
 
     while True:
         user_input: str = get_user_input()
@@ -42,8 +42,7 @@ def main():
                 else:
                     error_invalid_command()
             else:
-                conversation_history = run(user_input, conversation_history)
-
+                conversation_history: list = run(user_input, conversation_history)
 
 
 if __name__ == '__main__':
