@@ -1,7 +1,7 @@
 from openai_local.utils.system_prompt_handling import generate_system_prompt
 
 def manage_context(conversation_history):
-    messages = []
+    messages: list = []
 
     if not messages:
         system_message = generate_system_prompt()
