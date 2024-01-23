@@ -12,10 +12,10 @@ from terminal.components.assistant_output import *
 def run(prompt, conversation_history):
     try:
         with open(find_path_to_data_file("config.json"), "r") as file:
-            model_data = json.load(file)
-            model = model_data.get("model", "")
+            model_data: dict = json.load(file)
+            model: str = model_data.get("model", "")
         conversation_history.append({"role": "user", "content": prompt})
-        messages = manage_context(conversation_history)
+        messages: dict = manage_context(conversation_history)
     except Exception as e:
         error_unknown()
         return conversation_history
