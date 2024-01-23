@@ -23,7 +23,7 @@ def run(prompt, conversation_history):
     try:
         client = OpenAI()
 
-        response = ""
+        response: str = ""
 
         stream = client.chat.completions.create(
             model=model,
