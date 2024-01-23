@@ -17,9 +17,9 @@ Before doing any of this, navigate to the desired directory. You will also need 
        pip install -r requirements.txt
 4. **Export your OpenAI API key to environmental variables**
 
-       # On MacOS/Linux: export OPENAI_API_KEY="your api key"
-       # On Windows: setx OPENAI_API_KEY "your api key"
-5. **Run the AI Assistant**
+       # On MacOS/Linux: $ export OPENAI_API_KEY="your api key"
+       # On Windows: $ setx OPENAI_API_KEY "your api key"
+6. **Run the AI Assistant**
     
        python assistant/main.py
 ## Issues
