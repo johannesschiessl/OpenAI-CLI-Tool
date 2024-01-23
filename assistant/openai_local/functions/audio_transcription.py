@@ -13,7 +13,7 @@ def transcribe_audio(file_path):
         return
 
     try:
-        response = openai.audio.transcriptions.create(
+        response: str = openai.audio.transcriptions.create(
             model="whisper-1",
             file=file,
             response_format="text",
@@ -22,7 +22,7 @@ def transcribe_audio(file_path):
         error_openai()
         return
 
-    response = response.strip()
+    response: str = response.strip()
 
 
     write_output_to_file(response)

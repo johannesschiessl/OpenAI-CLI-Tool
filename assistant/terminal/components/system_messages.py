@@ -5,7 +5,7 @@ from utils.file_handling import find_path_to_data_file
 
 def message_initialize():
 
-    USERNAME_FILE_PATH = find_path_to_data_file("config.json")
+    USERNAME_FILE_PATH: str = find_path_to_data_file("config.json")
 
     with open(USERNAME_FILE_PATH, "r") as file:
         config_data: dict = json.load(file)
@@ -36,19 +36,19 @@ def message_configure():
         print(f"\nCurrent model: {purple(current_model)}")
 
     print("\nType the number of the model you want to use.")
-    model_user_input = input("#")
+    model_user_input: str = input("#")
 
     if model_user_input == "1":
-        new_model = "gpt-3.5-turbo"
+        new_model:str = "gpt-3.5-turbo"
     elif model_user_input == "2":
-        new_model = "gpt-4-1106-preview"
+        new_model:str = "gpt-4-1106-preview"
     elif model_user_input == "3":
-        new_model = "gpt-4"
+        new_model:str = "gpt-4"
     elif model_user_input == "4":
-        new_model = "gpt-4-32k"
+        new_model:str = "gpt-4-32k"
     else:
         print(red("\nInvalid model. Set to previous model."))
-        new_model = current_model
+        new_model: str = current_model
 
 
     with open(find_path_to_data_file("config.json"), 'w') as file:
