@@ -8,9 +8,9 @@ def message_initialize():
     USERNAME_FILE_PATH = find_path_to_data_file("config.json")
 
     with open(USERNAME_FILE_PATH, "r") as file:
-        config_data = json.load(file)
-        version = config_data.get("version", "")
-        gpt_model = config_data.get("model", "")
+        config_data: dict = json.load(file)
+        version: str = config_data.get("version", "")
+        gpt_model: str = config_data.get("model", "")
 
     print(green(f"AI-Assistant ({version})"))
     print(red(f"\nModel: {purple(gpt_model)}\n"))
@@ -29,8 +29,8 @@ def message_configure():
     print(f"#4     {purple('gpt-4-32k')}")
 
     with open(find_path_to_data_file("config.json"), "r") as file:
-        model_data = json.load(file)
-        current_model = model_data.get("model", "")
+        model_data: dict = json.load(file)
+        current_model: str = model_data.get("model", "")
 
     if current_model:
         print(f"\nCurrent model: {purple(current_model)}")
