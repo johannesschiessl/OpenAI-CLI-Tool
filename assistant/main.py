@@ -18,10 +18,10 @@ def main():
     create_config_file_if_not_exist()
 
     message_initialize()
-    conversation_history = []
+    conversation_history: list = []
 
     while True:
-        user_input = get_user_input()
+        user_input: str = get_user_input()
         if user_input:
             if user_input[0] == "/":
                 if user_input.startswith("/imagine "):
@@ -36,14 +36,13 @@ def main():
                 elif user_input == "/configure":
                     message_configure()
                 elif user_input == "/exit":
-                    quit()
+                    exit()
                 elif user_input == "/help":
                     message_help()
                 else:
                     error_invalid_command()
             else:
-                conversation_history = run(user_input, conversation_history)
-
+                conversation_history: list = run(user_input, conversation_history)
 
 
 if __name__ == '__main__':
