@@ -21,7 +21,7 @@ def main():
     conversation_history = []
 
     while True:
-        user_input = get_user_input()
+        user_input: str = get_user_input()
         if user_input:
             if user_input[0] == "/":
                 if user_input.startswith("/imagine "):
