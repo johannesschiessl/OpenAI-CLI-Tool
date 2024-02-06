@@ -31,6 +31,7 @@ def message_configure():
     with open(find_path_to_data_file("config.json"), "r") as file:
         model_data: dict = json.load(file)
         current_model: str = model_data.get("model", "")
+        current_instructions: str = model_data.get("instructions", "")
 
     if current_model:
         print(f"\nCurrent model: {purple(current_model)}")
@@ -55,6 +56,24 @@ def message_configure():
         json.dump({"model": new_model}, file)
 
     print("\nModel changed to:", purple(new_model))
+
+
+    print(f"\n {cyan("Custom Instructions")}")
+    if current_instructions != "":
+        print(current_instructions)
+    else:
+        print("No Custom Instructions yet.")
+
+    change_instructions = input("Do you want to change your Custom Instructions? Y/n")
+
+    if change_instructions.lower() == "Y":
+        new_instructions = input("New Custom Instructions:")
+
+        if new_instructions != "":
+            with open(find_path_to_data_file("config.json"), 'w') as file:
+            json.dump({"instructions": new_instructions}, file)
+            print(f"Custom Instructions set to:\n{new_instructions}")
+
 
 def message_reset_conversation():
     print("\nYour conversation history has been reset.")
