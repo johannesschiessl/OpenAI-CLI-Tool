@@ -15,7 +15,7 @@ Before doing any of this, navigate to the desired directory. You will also need 
        cd AI-Assistant
 3. **Install Requirements**:
 
-       pip install -r requirements.txt
+       # On Windows / Linux: pip install -r requirements.txt
 4. **Export your OpenAI API key to environmental variables**
 
        # On MacOS / Linux: $ export OPENAI_API_KEY="your openai-api key"
