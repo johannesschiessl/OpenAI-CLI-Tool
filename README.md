@@ -16,7 +16,9 @@ Before doing any of this, navigate to the desired directory. You will also need 
 3. **Install Requirements**:
 
        # On Windows / Linux: pip install -r requirements.txt
-4. **Export your OpenAI API key to environmental variables**
+       # On MacOS: pip3 install -r requirements.txt
+   
+5. **Export your OpenAI API key to environmental variables**
 
        # On MacOS / Linux: $ export OPENAI_API_KEY="your openai-api key"
        # On Windows: $ setx OPENAI_API_KEY "your openai-api key"
