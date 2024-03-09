@@ -1,3 +1,7 @@
+"""
+This module provides functions for formatting text with different colors using ANSI escape codes.
+"""
+
 def red(text):
     return "\033[91m{}\033[0m".format(text)
 

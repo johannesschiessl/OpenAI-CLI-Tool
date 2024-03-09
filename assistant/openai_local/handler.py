@@ -10,6 +10,9 @@ from terminal.components.assistant_output import *
 
 
 def run(prompt, conversation_history):
+    """
+    Function to run a conversation using an AI model, taking prompt and conversation history as input and returning the updated conversation history.
+    """
     try:
         with open(find_path_to_data_file("config.json"), "r") as file:
             model_data: dict = json.load(file)

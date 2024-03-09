@@ -14,7 +14,9 @@ from utils.file_handling import create_config_file_if_not_exist
 
 
 def main():
-
+    """
+	Main function for handling user input and executing corresponding commands.
+    """
     create_config_file_if_not_exist()
 
     message_initialize()

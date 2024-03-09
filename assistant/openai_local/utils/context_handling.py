@@ -1,6 +1,15 @@
 from openai_local.utils.system_prompt_handling import generate_system_prompt
 
 def manage_context(conversation_history):
+    """
+    Function to manage the context of a conversation.
+
+    Parameters:
+    - conversation_history: list of dictionaries containing the conversation history.
+
+    Returns:
+    - list of dictionaries representing the messages.
+    """
     messages: list = []
 
     if not messages:

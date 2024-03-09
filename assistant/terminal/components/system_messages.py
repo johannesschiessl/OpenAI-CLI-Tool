@@ -4,6 +4,9 @@ from terminal.utils.style_handling import green, red, cyan, purple
 from utils.file_handling import find_path_to_data_file
 
 def message_initialize():
+    """
+	Initializes the message system by reading configuration data from 'config.json' file, and then prints the AI-Assistant version, GPT model, and a list of available commands.
+	"""
 
     USERNAME_FILE_PATH: str = find_path_to_data_file("config.json")
 
@@ -22,6 +25,9 @@ def message_initialize():
     print(f"Type {cyan('/reset')} to reset the conversation history.")
 
 def message_configure():
+    """
+    Function to configure and change the current model for the application.
+    """
     print(f"\n{red('Available Models:')}")
     print(f"#1     {purple('gpt-3.5-turbo')}")
     print(f"#2     {purple('gpt-4-1106-preview')}")
@@ -57,11 +63,17 @@ def message_configure():
     print("\nModel changed to:", purple(new_model))
 
 def message_reset_conversation():
+    """
+    Resets the conversation history.
+    """
     print("\nYour conversation history has been reset.")
 
 
 def message_help():
-
+    """
+	A function to print the available commands for the user.
+    """
+    
     print("\nAvailable commands:")
     print(f"     {cyan('/imagine')} - Generate an image")
     print(f"     {cyan('/transcribe')} - Transcribe an audio file")
@@ -78,12 +90,21 @@ def message_help():
 # Error messages:
 
 def error_unknown():
+    """
+    No parameters and no return type. Prints a message indicating that an unknown error occurred.
+    """
     print(red("\nAn unknown error occurred. Please try again."))
 
 def error_invalid_command():
+    """
+    A function to handle an error for an invalid command.
+    """
     print(red(f"\nInvalid command. Use {cyan('/help')} {red('to see available commands.')}"))
 
 def error_openai():
+    """
+    A function that handles errors that occur with OpenAI.
+    """
     print(red("\nAn error occurred with OpenAI. Please try again."))
 
 error_file_not_found = lambda file_path: print(red(f"\nFile not found: {file_path}"))
