@@ -6,6 +6,15 @@ from terminal.components.assistant_output import print_text_to_speech
 
 
 def text_to_speech(prompt):
+    """
+    Convert text to speech using OpenAI's TTS model and save the speech as an audio file.
+    
+    Args:
+        prompt (str): The text prompt to be converted to speech.
+        
+    Returns:
+        None
+    """
     try:
         client = OpenAI()
         response = client.audio.speech.create(

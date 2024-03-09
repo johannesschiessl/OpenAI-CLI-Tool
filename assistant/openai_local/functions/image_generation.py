@@ -5,6 +5,15 @@ from terminal.components.assistant_output import print_image
 
 
 def generate_image(prompt):
+    """
+    Generate an image using OpenAI's image generation API.
+
+    Parameters:
+    prompt (str): The prompt for generating the image.
+
+    Returns:
+    None
+    """
     try:
         response = openai.images.generate(
             model="dall-e-3",
