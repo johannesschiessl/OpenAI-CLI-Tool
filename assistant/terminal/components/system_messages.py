@@ -47,7 +47,7 @@ def message_configure():
     if model_user_input == "1":
         new_model:str = "gpt-3.5-turbo"
     elif model_user_input == "2":
-        new_model:str = "gpt-4-1106-preview"
+        new_model:str = "gpt-4-turbo-preview"
     elif model_user_input == "3":
         new_model:str = "gpt-4"
     elif model_user_input == "4":
