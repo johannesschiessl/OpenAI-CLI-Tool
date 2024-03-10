@@ -20,11 +20,16 @@ Easily listen to your notes without having to read yourself.
 Example:
 `/text-to-speech Hello, World!´
 
-## /restart
+## /reset
 Create a new conversation with this prompt.
 
 Example:
-`/restart´
+`/reset´
+
+## /configure
+Update the model the assistant uses.
+Example:
+`/configure´
 
 ## /exit
 Exit the program with this prompt.
