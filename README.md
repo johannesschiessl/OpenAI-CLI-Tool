@@ -1,7 +1,5 @@
-# AI-Assistant
-A CLI tool designed to help you with a variety of tasks. Makes it easy to interact with the OpenAI API. Whether you have a question, need an image, want to convert text to speech, or want to transcribe something, AI-Assistant is here to help.
-
-If you need any help, please feel free to ask the [AI-Assistant Helper GPT](https://chat.openai.com/g/g-Npy8tPTy0-ai-assistant-helper) for assistance.       
+# OpenAI-CLI-Tool
+A CLI tool designed to help you with a variety of tasks. Makes it easy to interact with the OpenAI API, whether you have a question, need an image, want to convert text to speech, or want to transcribe something.
 ## Installation
 Follow these steps to get up and running.
 It is recommended to use a virtual environment to avoid package conflicts.
@@ -9,7 +7,7 @@ Before doing any of this, navigate to the desired directory. You will also need 
 
 1. **Clone the Repository**:
 
-       git clone https://github.com/johannesschiessl/AI-Assistant.git
+       git clone https://github.com/johannesschiessl/OpenAI-CLI-Tool.git
 2. **Navigate to the Project Directory**:
 
        cd AI-Assistant
